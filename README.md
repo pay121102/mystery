@@ -6,6 +6,11 @@
 - **通信は一切しません**。データはそのブラウザの中 (localStorage) と、書き出した JSON ファイルにだけ残ります
 - 無料版に機能の制限はありません
 
+**公開ページ: https://pay121102.github.io/mystery/** (無料版 v0.1.0)
+
+- [利用条件](terms.html)
+- 感想・不具合の報告: [GitHub の報告ページ](https://github.com/pay121102/mystery/issues/new/choose) (GitHub のアカウントが必要です。書いた内容は誰でも見られるので、未発表のシナリオの中身は書かないでください)
+
 ## 使い方
 
 1. `index.html` をダブルクリックしてブラウザで開きます (Chrome / Edge / Firefox / Safari の最新版)
@@ -53,7 +58,7 @@
 ## GitHub Pages で公開する
 
 1. GitHub で新しいリポジトリを作ります (例: `mystery-checker`、Public)
-2. この `mystery` フォルダの中身 (`index.html`, `style.css`, `tests.html`, `js/`, `README.md`) をリポジトリの一番上に置いてコミットします。ブラウザだけで行う場合は、リポジトリの画面で「Add file → Upload files」にフォルダの中身をドラッグします
+2. この `mystery` フォルダの中身 (`index.html`, `style.css`, `tests.html`, `terms.html`, `js/`, `README.md`, `.github/`) をリポジトリの一番上に置いてコミットします。ブラウザだけで行う場合は、リポジトリの画面で「Add file → Upload files」にフォルダの中身をドラッグします
 3. リポジトリの「Settings → Pages」を開き、「Build and deployment」の Source を「Deploy from a branch」、Branch を `main` / `/ (root)` にして Save します
 4. 1〜2 分待つと `https://<ユーザー名>.github.io/<リポジトリ名>/` で開けます。テストは同じ URL の末尾に `tests.html` を付けて確認できます
 
@@ -73,5 +78,7 @@
 | `js/sample.js` | サンプルシナリオと、その期待される警告 |
 | `js/app.js` | 画面の動き、自動保存、書き出し・読み込み |
 | `tests.html` / `js/tests.js` | テスト |
+| `terms.html` | 利用条件 |
+| `.github/ISSUE_TEMPLATE/` | 感想・不具合の報告フォーム |
 
 ES モジュールは使っていません (ダブルクリックで開いたときに読み込めないため)。

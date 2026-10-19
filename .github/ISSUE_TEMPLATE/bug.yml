@@ -1,0 +1,45 @@
+name: 不具合の報告
+description: 動かない・表示が崩れる・警告がおかしい、など
+title: "[不具合] "
+labels: ["不具合"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告をありがとうございます。
+        **このページの内容は誰でも見られます。** 未発表のシナリオの中身や個人情報は書かないでください。
+  - type: textarea
+    id: what
+    attributes:
+      label: 何が起きましたか
+      description: 期待した動きと、実際の動き
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 起きるまでの手順
+      placeholder: |
+        1. サンプルを開く
+        2. 時系列表の ○○ のマスを押す
+        3. ...
+  - type: dropdown
+    id: open
+    attributes:
+      label: どこから開きましたか
+      options:
+        - 公開ページ (pay121102.github.io)
+        - ダウンロードした index.html をダブルクリック
+        - その他
+  - type: input
+    id: env
+    attributes:
+      label: 使った端末とブラウザ
+      placeholder: 例: Windows 11 の Chrome、iPhone の Safari
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: そのほか
+      description: 画面の写真があれば貼ってください (シナリオの中身が写らないように)

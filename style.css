@@ -176,6 +176,16 @@ dialog h2 { font-size: 16px; margin: 0 0 12px; }
 .dialog-actions .spacer { flex: 1; }
 
 .foot { padding: 0 16px 24px; color: var(--muted); font-size: 12px; }
+.foot p { margin: 4px 0; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+a { color: var(--accent); }
+
+/* 利用条件のページ */
+.doc { max-width: 760px; margin: 0 auto; padding: 16px 16px 48px; }
+.doc h1 { font-size: 22px; margin: 8px 0 4px; }
+.doc h2 { font-size: 16px; margin: 24px 0 6px; }
+.doc ul { padding-left: 1.4em; }
+.doc li { margin: 4px 0; }
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); }

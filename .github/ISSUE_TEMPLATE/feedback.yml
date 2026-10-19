@@ -1,0 +1,51 @@
+name: 感想・要望
+description: 使ってみた感想や、ほしい機能を送る
+title: "[感想] "
+labels: ["感想"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感想をありがとうございます。わかる範囲でかまいません。
+        **このページの内容は誰でも見られます。** 未発表のシナリオの中身や個人情報は書かないでください。
+  - type: dropdown
+    id: role
+    attributes:
+      label: シナリオづくりの経験
+      options:
+        - マダミスのシナリオを作っている (頒布・販売したことがある)
+        - マダミスのシナリオを作っている (まだ公開していない)
+        - TRPG のシナリオを作っている
+        - 遊ぶ側として気になった
+        - その他
+    validations:
+      required: true
+  - type: dropdown
+    id: use
+    attributes:
+      label: 次のシナリオづくりで使いたいと思いますか
+      options:
+        - ぜひ使いたい
+        - 機能が増えれば使いたい
+        - たぶん使わない
+    validations:
+      required: true
+  - type: textarea
+    id: found
+    attributes:
+      label: 矛盾チェックで役に立ったこと
+      description: 自分のシナリオを入れてみて、見つかった矛盾があれば (シナリオの中身はぼかしてかまいません)
+  - type: textarea
+    id: stuck
+    attributes:
+      label: 使いにくかったところ・手が止まったところ
+  - type: textarea
+    id: want
+    attributes:
+      label: ほしい機能
+      description: 例: ハンドアウトの PDF 書き出し、ココフォリア用の書き出し、など
+  - type: input
+    id: env
+    attributes:
+      label: 使った端末とブラウザ (任意)
+      placeholder: 例: Windows の Chrome、iPhone の Safari
