@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>矛盾チェックのテスト</title>
+<meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'">
+<link rel="stylesheet" href="style.css">
+<style>
+  .tests { padding: 16px; max-width: 900px; }
+  .tests h1 { font-size: 18px; }
+  .result { padding: 4px 8px; margin: 2px 0; border-left: 4px solid var(--border); background: var(--surface); }
+  .result.pass { border-left-color: #2e7d32; }
+  .result.fail { border-left-color: var(--error); background: var(--error-bg); }
+  .result pre { margin: 4px 0 0; white-space: pre-wrap; font-size: 12px; }
+  #summary { font-weight: bold; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="tests">
+  <h1>矛盾チェックのテスト</h1>
+  <p class="hint">このページを開くだけでテストが走ります。通信はしません。</p>
+  <p id="summary">実行中…</p>
+  <div id="results"></div>
+</div>
+<script src="js/model.js"></script>
+<script src="js/checker.js"></script>
+<script src="js/sample.js"></script>
+<script src="js/tests.js"></script>
+</body>
+</html>

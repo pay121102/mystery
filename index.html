@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シナリオ矛盾チェッカー (無料版)</title>
+<meta name="description" content="マーダーミステリー・TRPG のシナリオの時系列表と矛盾チェック。ブラウザだけで動き、通信はしません。">
+<meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>シナリオ矛盾チェッカー <span class="badge">無料版</span></h1>
+    <input id="title" class="title-input" type="text" placeholder="シナリオ名" aria-label="シナリオ名">
+  </div>
+  <div class="actions">
+    <button type="button" id="btn-export">JSON 書き出し</button>
+    <label class="button" for="file-import">JSON 読み込み</label>
+    <input type="file" id="file-import" accept=".json,application/json" hidden>
+    <button type="button" id="btn-sample">サンプルを開く</button>
+    <button type="button" id="btn-new">新規作成</button>
+    <span id="save-status" class="save-status" aria-live="polite"></span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button type="button" role="tab" data-tab="timeline">時系列表</button>
+  <button type="button" role="tab" data-tab="testimonies">証言</button>
+  <button type="button" role="tab" data-tab="clues">手がかり</button>
+  <button type="button" role="tab" data-tab="settings">人物・時刻・場所</button>
+</nav>
+
+<div class="layout">
+  <main id="main"></main>
+  <aside class="warnings" aria-label="警告一覧">
+    <details id="warn-box" open>
+      <summary><span id="warn-summary">警告</span></summary>
+      <div id="warn-list"></div>
+    </details>
+  </aside>
+</div>
+
+<dialog id="cell-dialog">
+  <form method="dialog" id="cell-form">
+    <h2 id="cell-title"></h2>
+    <div id="cell-entries"></div>
+    <button type="button" id="cell-add">＋ 行動を追加</button>
+    <p class="hint">同じ時刻に別の場所の行動を入れると「同じ時刻に複数の場所にいる」と警告されます。</p>
+    <div class="dialog-actions">
+      <button type="button" id="cell-clear" class="danger">空にする</button>
+      <span class="spacer"></span>
+      <button type="button" id="cell-cancel">やめる</button>
+      <button type="submit" id="cell-save" class="primary">決定</button>
+    </div>
+  </form>
+</dialog>
+
+<footer class="foot">データはこのブラウザの中 (localStorage) にだけ保存され、どこにも送信されません。大事なシナリオは「JSON 書き出し」で保存してください。</footer>
+
+<script src="js/model.js"></script>
+<script src="js/checker.js"></script>
+<script src="js/sample.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
